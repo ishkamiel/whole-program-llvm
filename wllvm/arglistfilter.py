@@ -272,6 +272,7 @@ class ArgumentListFilter(object):
             r'^-march=.+$' : (0, ArgumentListFilter.compileUnaryCallback),                               #iam: linux kernel stuff
             r'^--param=.+$' : (0, ArgumentListFilter.compileUnaryCallback),                              #iam: linux kernel stuff
 
+            r'^--target=.+$' : (1, ArgumentListFilter.compileBinaryCallback),
 
             #iam: mac stuff...
             r'-mmacosx-version-min=.+$' :  (0, ArgumentListFilter.compileUnaryCallback),
